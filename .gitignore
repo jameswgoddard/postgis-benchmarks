@@ -1,5 +1,4 @@
 # Application specific secrets
-.env
 db_*
 
 # Byte-compiled / optimized / DLL files
