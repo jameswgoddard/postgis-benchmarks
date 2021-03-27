@@ -9,6 +9,23 @@ services:
   gui:
     build:
       context: gui/.
+    restart: on-failure
+    secrets:
+      - db_password
+  data-loader:
+    build:
+      context: data-loader/.
+    env_file: 
+      - .env
+    restart: on-failure
+    secrets:
+      - db_password
+  data-generator:
+    build:
+      context: data-generator/.
+    env_file: 
+      - .env
+    restart: on-failure
     secrets:
       - db_password
 secrets:
