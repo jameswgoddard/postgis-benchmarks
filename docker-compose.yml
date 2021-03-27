@@ -1,0 +1,16 @@
+version: "3.7"
+services: 
+  db:
+    image: postgis/postgis
+    env_file: 
+      - .env
+    secrets:
+      - db_password
+  gui:
+    build:
+      context: gui/.
+    secrets:
+      - db_password
+secrets:
+  db_password:
+    file: ./db_password
