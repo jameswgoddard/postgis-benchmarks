@@ -25,3 +25,6 @@
   - K8s
   - Docker Swarm?
   - Nomad?
+
+## References / tutorials used
+- https://github.com/postgis/docker-postgis
